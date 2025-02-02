@@ -1,15 +1,59 @@
 # SmartAttend Pro
 
-A modern face recognition-based attendance system built with Python and OpenCV.
+A modern face recognition-based attendance system built with Python and OpenCV, featuring a sleek dark-themed UI.
 
-## Features
+![Main Dashboard](docs/images/main_dashboard.png)
 
+## Key Features
+
+### 1. Student Management
+![Student Management](docs/images/student_management.png)
+- Complete student information management
+- Department and branch-wise organization
+- Photo sample collection for face recognition
+- Intuitive search and filter capabilities
+- Bulk import/export functionality
+
+### 2. Face Recognition
 - Real-time face detection and recognition
+- High-accuracy student identification
+- Confidence level indicators
 - Automatic attendance marking
-- Modern dark-themed UI
-- Database integration for student information
-- CSV export for attendance records
-- Multi-threaded processing for smooth performance
+- Multi-face detection support
+
+### 3. Attendance Management
+![Attendance Management](docs/images/attendance_management.png)
+- Automated attendance tracking
+- CSV import/export functionality
+- Real-time attendance status updates
+- Detailed attendance records
+- Easy data management
+
+### 4. Training System
+![Training Interface](docs/images/train_data.png)
+- Neural network-based training
+- Progress visualization
+- Real-time accuracy metrics
+- Automated model optimization
+- Dataset management
+
+### 5. Help System
+![Help Chatbot](docs/images/help_chatbot.png)
+- Interactive help chatbot
+- Common questions and answers
+- Step-by-step guides
+- Quick issue resolution
+- User-friendly interface
+
+## Technical Features
+
+- Modern dark-themed UI using CustomTkinter
+- Real-time face detection using OpenCV
+- MySQL database integration
+- Multi-threaded processing
+- CSV data import/export
+- Secure authentication system
+- Automated backup system
 
 ## Installation
 
@@ -19,7 +63,7 @@ git clone https://github.com/PatelJU/SmartAttend-Pro.git
 cd SmartAttend-Pro
 ```
 
-2. Create and activate a virtual environment (recommended):
+2. Create and activate a virtual environment:
 ```bash
 python -m venv venv
 # Windows
@@ -40,9 +84,8 @@ python src/scripts/setup_database.py
 
 5. Configure environment variables:
 ```bash
-# Copy example env file
 cp .env.example .env
-# Edit .env with your database credentials and other settings
+# Edit .env with your database credentials
 ```
 
 ## Usage
@@ -52,11 +95,12 @@ cp .env.example .env
 python src/app.py
 ```
 
-2. Use the interface to:
-   - Manage student records
-   - Start face recognition
-   - View attendance records
-   - Generate reports
+2. Navigate through the modules:
+   - Student Details: Manage student information
+   - Face Detect: Start face recognition
+   - Attendance: View and manage attendance
+   - Train Data: Train the recognition model
+   - Photos: View captured photos
 
 ## System Requirements
 
