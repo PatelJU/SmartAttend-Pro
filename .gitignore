@@ -74,6 +74,11 @@ src/logs/
 *.jpeg
 *.png
 *.gif
+# Allow assets directory images
+!.github/assets/*.jpg
+!.github/assets/*.jpeg
+!.github/assets/*.png
+!.github/assets/*.gif
 
 # IDE specific files
 *.swp
