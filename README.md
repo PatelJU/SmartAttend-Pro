@@ -27,11 +27,25 @@ A modern face recognition-based attendance system built with Python and OpenCV, 
 - 📤 Bulk import/export functionality
 
 ### 2. Face Recognition
+<div align="center">
+  <img src=".github/assets/face_recognition_demo.png" alt="Face Recognition in Action" width="800"/>
+</div>
+
 - 🎯 Real-time face detection and recognition
 - ✨ High-accuracy student identification
 - 📊 Confidence level indicators
 - ✅ Automatic attendance marking
 - 👥 Multi-face detection support
+
+#### How it works:
+1. Click the "Start Recognition" button to activate the camera
+2. The system detects faces in real-time
+3. When a student is recognized:
+   - Their details appear in the Recognition Info panel
+   - ID, Roll, Name, Department, and Semester are displayed
+   - Confidence level shows the accuracy of recognition
+   - Attendance is automatically marked in the CSV file
+4. The system prevents duplicate entries within an hour
 
 ### 3. Attendance Management
 <div align="center">
