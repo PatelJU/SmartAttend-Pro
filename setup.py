@@ -3,7 +3,8 @@ from setuptools import setup, find_packages
 setup(
     name="smartattend-pro",
     version="1.0.0",
-    packages=find_packages(),
+    packages=find_packages(include=['src', 'src.*']),
+    package_dir={'': '.'},
     install_requires=[
         'opencv-python-headless',
         'numpy',
@@ -12,6 +13,13 @@ setup(
         'python-dotenv',
         'mysql-connector-python',
     ],
+    extras_require={
+        'test': [
+            'pytest>=7.0.0',
+            'pytest-cov>=4.0.0',
+            'pytest-mock>=3.10.0',
+        ],
+    },
     python_requires='>=3.8',
     author="PatelJU",
     description="A modern face recognition-based attendance system",

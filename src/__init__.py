@@ -1,5 +1,5 @@
 """
-SmartAttend Pro - A modern face recognition-based attendance system
+SmartAttend Pro - Face Recognition Attendance System
 """
 
 __version__ = '1.0.0' 
