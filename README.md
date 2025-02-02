@@ -2,12 +2,12 @@
 
 A modern face recognition-based attendance system built with Python and OpenCV, featuring a sleek dark-themed UI.
 
-![Main Dashboard](docs/images/main_dashboard.png)
+<img src=".github/assets/main_dashboard.png" alt="Main Dashboard" width="800"/>
 
 ## Key Features
 
 ### 1. Student Management
-![Student Management](docs/images/student_management.png)
+<img src=".github/assets/student_management.png" alt="Student Management" width="800"/>
 - Complete student information management
 - Department and branch-wise organization
 - Photo sample collection for face recognition
@@ -22,7 +22,7 @@ A modern face recognition-based attendance system built with Python and OpenCV, 
 - Multi-face detection support
 
 ### 3. Attendance Management
-![Attendance Management](docs/images/attendance_management.png)
+<img src=".github/assets/attendance_management.png" alt="Attendance Management" width="800"/>
 - Automated attendance tracking
 - CSV import/export functionality
 - Real-time attendance status updates
@@ -30,7 +30,7 @@ A modern face recognition-based attendance system built with Python and OpenCV, 
 - Easy data management
 
 ### 4. Training System
-![Training Interface](docs/images/train_data.png)
+<img src=".github/assets/train_data.png" alt="Training Interface" width="800"/>
 - Neural network-based training
 - Progress visualization
 - Real-time accuracy metrics
@@ -38,7 +38,7 @@ A modern face recognition-based attendance system built with Python and OpenCV, 
 - Dataset management
 
 ### 5. Help System
-![Help Chatbot](docs/images/help_chatbot.png)
+<img src=".github/assets/help_chatbot.png" alt="Help Chatbot" width="800"/>
 - Interactive help chatbot
 - Common questions and answers
 - Step-by-step guides
