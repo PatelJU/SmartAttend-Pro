@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security issue in SmartAttend Pro, please report it by sending an email to pateljayudaykumar@gmail.com. 
+If you discover a security issue in SmartAttend Pro, please report it by sending an email to try.jashpatel@gmail.com. 
 
 Please include:
 - Description of the issue
