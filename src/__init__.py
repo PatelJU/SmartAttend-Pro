@@ -1,3 +1,7 @@
+"""
+SmartAttend Pro - A modern face recognition-based attendance system
+"""
+
 import os
 import sys
 
@@ -9,4 +13,7 @@ sys.path.insert(0, project_root)
 from src.utils.paths import ensure_directories_exist
 
 # Create all necessary directories
-ensure_directories_exist() 
+ensure_directories_exist()
+
+# Import version
+__version__ = '1.0.0' 

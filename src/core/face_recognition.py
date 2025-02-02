@@ -11,7 +11,7 @@ import time
 import logging
 import customtkinter as ctk
 import numpy as np
-from utils.paths import get_model_path, get_image_path, get_data_file_path
+from ..utils.paths import get_model_path, get_image_path, get_data_file_path
 from dotenv import load_dotenv
 
 logging.basicConfig(level=logging.DEBUG)
@@ -26,6 +26,95 @@ DB_CONFIG = {
     'password': os.getenv("DB_PASSWORD"),
     'database': os.getenv("DB_NAME", "face_recognizer")
 }
+
+class FaceRecognizer:
+    """A class for face detection and recognition."""
+    
+    def __init__(self):
+        """Initialize the face recognizer with required models."""
+        self.face_cascade = cv2.CascadeClassifier(get_model_path("haarcascade_frontalface_default.xml"))
+        self.recognizer = cv2.face.LBPHFaceRecognizer_create()
+        self.model_trained = False
+        
+    def detect_faces(self, image):
+        """Detect faces in the given image.
+        
+        Args:
+            image: numpy array of the image
+            
+        Returns:
+            List of tuples (x, y, w, h) for each detected face
+        """
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        faces = self.face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5, minSize=(30, 30))
+        return faces
+        
+    def train(self, train_dir):
+        """Train the face recognition model.
+        
+        Args:
+            train_dir: Directory containing training images organized by person
+        """
+        faces = []
+        labels = []
+        label_map = {}
+        current_label = 0
+        
+        for person_dir in os.listdir(train_dir):
+            person_path = os.path.join(train_dir, person_dir)
+            if not os.path.isdir(person_path):
+                continue
+                
+            for img_name in os.listdir(person_path):
+                img_path = os.path.join(person_path, img_name)
+                img = cv2.imread(img_path)
+                if img is None:
+                    continue
+                    
+                gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+                detected_faces = self.detect_faces(img)
+                
+                for (x, y, w, h) in detected_faces:
+                    faces.append(gray[y:y+h, x:x+w])
+                    labels.append(current_label)
+                    
+            label_map[current_label] = person_dir
+            current_label += 1
+            
+        if faces:
+            self.recognizer.train(faces, np.array(labels))
+            self.model_trained = True
+            
+    def recognize(self, image):
+        """Recognize faces in the given image.
+        
+        Args:
+            image: numpy array of the image
+            
+        Returns:
+            List of tuples (label, confidence) for each recognized face
+        """
+        if not self.is_model_trained():
+            return None
+            
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        faces = self.detect_faces(image)
+        results = []
+        
+        for (x, y, w, h) in faces:
+            face_roi = gray[y:y+h, x:x+w]
+            label, confidence = self.recognizer.predict(face_roi)
+            results.append((label, confidence))
+            
+        return results
+        
+    def is_model_trained(self):
+        """Check if the model has been trained.
+        
+        Returns:
+            bool: True if model is trained, False otherwise
+        """
+        return self.model_trained
 
 class Face_Recognition1:
     def __init__(self, root):

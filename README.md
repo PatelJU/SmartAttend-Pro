@@ -2,12 +2,12 @@
 
 A modern face recognition-based attendance system built with Python and OpenCV, featuring a sleek dark-themed UI.
 
-![Main Dashboard](https://raw.githubusercontent.com/PatelJU/SmartAttend-Pro/main/.github/assets/main_dashboard.png)
+![Main Dashboard](.github/assets/main_dashboard.png)
 
 ## Key Features
 
 ### 1. Student Management
-![Student Management](https://raw.githubusercontent.com/PatelJU/SmartAttend-Pro/main/.github/assets/student_management.png)
+![Student Management](.github/assets/student_management.png)
 - Complete student information management
 - Department and branch-wise organization
 - Photo sample collection for face recognition
@@ -22,7 +22,7 @@ A modern face recognition-based attendance system built with Python and OpenCV, 
 - Multi-face detection support
 
 ### 3. Attendance Management
-![Attendance Management](https://raw.githubusercontent.com/PatelJU/SmartAttend-Pro/main/.github/assets/attendance_management.png)
+![Attendance Management](.github/assets/attendance_management.png)
 - Automated attendance tracking
 - CSV import/export functionality
 - Real-time attendance status updates
@@ -30,7 +30,7 @@ A modern face recognition-based attendance system built with Python and OpenCV, 
 - Easy data management
 
 ### 4. Training System
-![Training Interface](https://raw.githubusercontent.com/PatelJU/SmartAttend-Pro/main/.github/assets/train_data.png)
+![Training Interface](.github/assets/train_data.png)
 - Neural network-based training
 - Progress visualization
 - Real-time accuracy metrics
@@ -38,7 +38,7 @@ A modern face recognition-based attendance system built with Python and OpenCV, 
 - Dataset management
 
 ### 5. Help System
-![Help Chatbot](https://raw.githubusercontent.com/PatelJU/SmartAttend-Pro/main/.github/assets/help_chatbot.png)
+![Help Chatbot](.github/assets/help_chatbot.png)
 - Interactive help chatbot
 - Common questions and answers
 - Step-by-step guides
