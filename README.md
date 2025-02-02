@@ -2,7 +2,7 @@
 
 A modern face recognition-based attendance system built with Python and OpenCV, featuring a sleek dark-themed UI.
 
-![Main Dashboard](https://raw.githubusercontent.com/PatelJU/SmartAttend-Pro/main/.github/assets/main_dashboard.png)
+![Main Dashboard](.github/assets/main_dashboard.png)
 
 ## Key Features
 
