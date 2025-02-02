@@ -11,7 +11,7 @@ import time
 import logging
 import customtkinter as ctk
 import numpy as np
-from ..utils.paths import get_model_path, get_image_path, get_data_file_path
+from utils.paths import get_model_path, get_image_path, get_data_file_path
 from dotenv import load_dotenv
 
 logging.basicConfig(level=logging.DEBUG)
