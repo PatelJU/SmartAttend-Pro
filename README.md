@@ -100,30 +100,85 @@ cd SmartAttend-Pro
 
 2. Create and activate a virtual environment:
 ```bash
-python -m venv venv
-
 # Windows
+python -m venv venv
 venv\Scripts\activate
 
 # Linux/Mac
+python -m venv venv
 source venv/bin/activate
 ```
 
 3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+
+   For minimal installation (recommended for most users):
+   ```bash
+   pip install -r requirements-minimal.txt
+   ```
+
+   For full installation (including development tools):
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+   If you encounter any issues with OpenCV, try:
+   ```bash
+   pip install opencv-contrib-python --no-cache-dir
+   ```
 
 4. Set up the database:
-```bash
-python src/scripts/setup_database.py
-```
+   - Install MySQL if not already installed
+   - Create a new database named 'face_recognizer'
+   - Run the database setup script:
+   ```bash
+   python src/scripts/setup_database.py
+   ```
 
 5. Configure environment variables:
 ```bash
+# Windows
+copy .env.example .env
+
+# Linux/Mac
 cp .env.example .env
-# Edit .env with your database credentials
+
+# Edit .env with your database credentials:
+# DB_HOST=localhost
+# DB_USER=your_username
+# DB_PASSWORD=your_password
+# DB_NAME=face_recognizer
 ```
+
+6. Verify installation:
+```bash
+python src/app.py
+```
+
+### Troubleshooting
+
+If you encounter any issues:
+
+1. OpenCV errors:
+   ```bash
+   pip uninstall opencv-python opencv-contrib-python
+   pip install opencv-contrib-python --no-cache-dir
+   ```
+
+2. Tkinter errors:
+   - Windows: Python includes Tkinter by default
+   - Linux: `sudo apt-get install python3-tk`
+   - Mac: `brew install python-tk`
+
+3. MySQL Connector errors:
+   ```bash
+   pip uninstall mysql-connector-python
+   pip install mysql-connector-python --no-cache-dir
+   ```
+
+4. CustomTkinter issues:
+   ```bash
+   pip install --upgrade customtkinter
+   ```
 
 ## 🚀 Usage
 

@@ -1,0 +1,12 @@
+# Essential dependencies for running SmartAttend Pro
+opencv-contrib-python>=4.8.0
+numpy>=1.24.0
+Pillow>=10.0.0
+customtkinter>=5.2.0
+mysql-connector-python>=8.0.33
+python-dotenv>=1.0.0
+tk>=0.1.0
+typing_extensions>=4.7.1
+darkdetect>=0.7.1
+pandas>=2.0.0
+python-dateutil>=2.8.2 

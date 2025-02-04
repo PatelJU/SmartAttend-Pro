@@ -1,9 +1,35 @@
-opencv-contrib-python>=4.8.0
-numpy>=1.24.0
-Pillow>=10.0.0
-customtkinter>=5.2.0
-mysql-connector-python>=8.0.33
-python-dotenv>=1.0.0
-pandas>=2.0.0
-tqdm>=4.65.0
-scikit-learn>=1.3.0 
+# Core dependencies
+opencv-contrib-python>=4.8.0  # For face recognition and computer vision
+numpy>=1.24.0  # For numerical operations
+Pillow>=10.0.0  # For image processing
+customtkinter>=5.2.0  # For modern UI
+mysql-connector-python>=8.0.33  # For database operations
+python-dotenv>=1.0.0  # For environment variables
+
+# GUI dependencies
+tk>=0.1.0  # For basic tkinter support
+typing_extensions>=4.7.1  # Required by customtkinter
+darkdetect>=0.7.1  # Required by customtkinter for theme detection
+
+# Image processing
+opencv-python-headless>=4.8.0  # Headless version for servers
+scikit-image>=0.21.0  # Additional image processing tools
+
+# Testing dependencies
+pytest>=7.0.0  # For running tests
+pytest-cov>=4.0.0  # For test coverage
+pytest-mock>=3.10.0  # For mocking in tests
+
+# Development tools
+black>=23.0.0  # Code formatter
+flake8>=6.0.0  # Code linter
+isort>=5.12.0  # Import sorter
+
+# Utilities
+tqdm>=4.65.0  # For progress bars
+pandas>=2.0.0  # For data manipulation
+python-dateutil>=2.8.2  # For date handling
+
+# Optional but recommended
+matplotlib>=3.7.0  # For plotting and visualization
+seaborn>=0.12.0  # For statistical visualization 
