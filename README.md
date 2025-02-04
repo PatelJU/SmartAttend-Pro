@@ -201,9 +201,6 @@ python src/app.py
 - MySQL/MariaDB
 - Webcam
 
-## 🤝 Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
 ## 📝 License
 
@@ -215,6 +212,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - CustomTkinter for modern UI components
 - All contributors who have helped with testing and improvements
 
-## 📞 Contact
+
 
 - Project Link: [https://github.com/PatelJU/SmartAttend-Pro](https://github.com/PatelJU/SmartAttend-Pro) 
